@@ -1,16 +1,4 @@
-def operation(item,shopping_list,operation):
-    if operation=='1':
-        shopping_list.append(item)
-        return "Item added"
-    if operation=='2:
-        if item in shopping_list:
-            shopping_list.remove(item)
-            return "Item deleted"
-        else :return "Item does not exist in your list"
-    if operation=='3':
-        return shopping_list
-      
-def display_menu():  
+def display_menu():
     print("Shopping List Manager")
     print("1. Add Item")
     print("2. Remove Item")
@@ -25,17 +13,22 @@ def main():
 
         if choice == '1':
             # Prompt for and add an item
-            item=input("Enter your item to add : ").lower()
-            print(operation(item,shopping_list,choice))
+            item=input("Enter your item ").lower()
+            shopping_list.append(item)
+            print( "Item added")
             pass
         elif choice == '2':
             # Prompt for and remove an item
             item=input("Enter your item ").lower()
-            print(operation(item,shopping_list,choice))
+            if item in shopping_list:
+                shopping_list.remove(item)
+                print("Item deleted")
+            else :print( "Item does not exist in your list")
             pass
         elif choice == '3':
             # Display the shopping list
-            print(operation(item,shopping_list,choice))
+           
+            print(shopping_list)
             pass
         elif choice == '4':
             print("Goodbye!")
