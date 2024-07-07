@@ -1,18 +1,18 @@
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
+# temp_conversion_tool.py
+
+# Global conversion factors
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
 FAHRENHEIT_FREEZING_POINT = 32
 
 # Function to convert Fahrenheit to Celsius
-def convert_to_celsius(fahrenheit):
-    global FAHRENHEIT_TO_CELSIUS_FACTOR, FAHRENHEIT_FREEZING_POINT
-    celsius = (fahrenheit - FAHRENHEIT_FREEZING_POINT) * FAHRENHEIT_TO_CELSIUS_FACTOR
-    return celsius
+def  convert_to_celsius(fahrenheit):
+   return (fahrenheit - FAHRENHEIT_FREEZING_POINT) * FAHRENHEIT_TO_CELSIUS_FACTOR
+     
 
 # Function to convert Celsius to Fahrenheit
 def convert_to_fahrenheit(celsius):
-    global CELSIUS_TO_FAHRENHEIT_FACTOR, FAHRENHEIT_FREEZING_POINT
-    fahrenheit = celsius * CELSIUS_TO_FAHRENHEIT_FACTOR + FAHRENHEIT_FREEZING_POINT
-    return fahrenheit
+    return celsius * CELSIUS_TO_FAHRENHEIT_FACTOR + FAHRENHEIT_FREEZING_POINT
 
 # User interaction
 def main():
