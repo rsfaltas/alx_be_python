@@ -17,9 +17,6 @@ def convert_to_fahrenheit(celsius):
 
 # User interaction
 def main():
-    FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
-    CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
-    FAHRENHEIT_FREEZING_POINT = 32
     try:
         temperature = float(input("Enter the temperature to convert: "))
     except ValueError:
